@@ -19,17 +19,17 @@ Köpnu-knapp: leder till sida med beställningsformulär.
 ini_set("display_errors", 1);
 ?>
 <?php
-    include 'header.php'
+include 'header.php'
 ?>
 <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
-<h1><?=PAGE_INDEX?> - en annan slags webshop!</h1>
+<h1><?= PAGE_INDEX ?> - en annan slags webshop!</h1>
 <h2>Välkommen till webshopen!</h2>
 
 <form method="post" action="orderform.php">
 Vad vill du köpa? <br>
 Produktnamn: <input name="produkt" type="text"> <br>
-<input type=
-"submit" value="Köp">
+<button><input type=
+"submit" value="Köp"></button>
 </form>
 
 <a href="orderform.php">Gå till beställningssidan</a>
@@ -72,5 +72,5 @@ Footer-länk
 	
 
 
-*/
+ */
 ?>

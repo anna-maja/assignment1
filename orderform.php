@@ -12,7 +12,7 @@ include 'header.php'
 $produkt = $_POST['produkt'];
 ?>
 
-<h1><?= PAGE_FORM?></h1>
+<h1><?= PAGE_FORM ?></h1>
 <h2>Här kan du fylla i din beställning.</h2>
 <p>
     <?php
@@ -33,8 +33,10 @@ E-post:  <input name="epost" type="text"> <br>
 Leveransadress (om annan än ovan): <input name="levadr" type="text"> <br>
 Ev meddelande: <input name="meddelande" type="text"> <br>
 
+<button>
 <input type=
 "submit" value="Skicka">
+</button>
 </form>
 
 <?php

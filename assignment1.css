@@ -1,24 +1,43 @@
-/*h1, h2, body: font
-h1: storlek1
-h2: storlek2 
+h1,
+h2,
+body {
+  font-family: "Raleway", sans-serif;
+}
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
 
-body: fontstorlek som knapp-texten, vänstercentrerat. 
+body {
+  font-size: 0.9rem;
+  text-align: left;
+}
+button {
+  font-size: 0.9rem;
+  text-align: center;
+  border: 1px, black, solid;
+  border-radius: 25%
+}
+/*
 
 tr, knapp, form, footer: samma font
 th: större storlek, fetstil
 td: mindre storlek, samma i alla
-
+*/ /*
 knapp: mindre storlek, kontur, centrerad text, touppercase
-knappBuy: färg1 
+knappBuy: färg1 color: grey;
 knappSend: färg2 
-
+*/ /*
 footer: textstorlek, textalignment, bakgrundsfärg (font ovan)
 
 form: samma storlek som i knapp, men svart.
-
+*/ /*
 font-family: 'Roboto', sans-serif;
 font-family: 'Raleway', sans-serif;
 */
+
 /*
 Välkommen till vår webshop: vanlig h1-rubrik. 
 Titeln kan vara en konstant.
