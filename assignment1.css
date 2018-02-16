@@ -1,0 +1,57 @@
+/*h1, h2, body: font
+h1: storlek1
+h2: storlek2 
+
+body: fontstorlek som knapp-texten, vänstercentrerat. 
+
+tr, knapp, form, footer: samma font
+th: större storlek, fetstil
+td: mindre storlek, samma i alla
+
+knapp: mindre storlek, kontur, centrerad text, touppercase
+knappBuy: färg1 
+knappSend: färg2 
+
+footer: textstorlek, textalignment, bakgrundsfärg (font ovan)
+
+form: samma storlek som i knapp, men svart.
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+/*
+Välkommen till vår webshop: vanlig h1-rubrik. 
+Titeln kan vara en konstant.
+Header
+	Hela head inkl body-start och h1
+	Title konstant
+Produkterna ligger i en tabell. 
+”Produkter” == tablehead.
+Sen varje produkt i en td:
+	Produktnamn
+	Bild
+	Pris
+	Köpnu-knapp
+Köpnu-knapp: leder till sida med beställningsformulär. 
+Beställningsformulär: 
+	Högst upp: h1 Beställningsformulär (konstant? Samma i titel och h1?)
+	info om vald produkt (från startsidan via GET-metoden)
+	Ange namn, epost-adress, leveransadress, möjlighet till meddelande.
+	Skicka == submit
+Submit: beställningen skickas med e-post
+	till mig
+	till kunden
+Sidfot – separat footer. Samma på både produkt- och formulärsidan.
+
+Sida 1 – startsida	 
+Header-länk
+Tabell
+Footer-länk
+Sida 2		
+Header-länk
+Beställningsformulär
+Footer-länk
+	
+
+
+*/
