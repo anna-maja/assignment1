@@ -13,31 +13,37 @@ $produkt = $_POST['produkt'];
 ?>
 
 <h1><?= PAGE_FORM ?></h1>
-<h2>Här kan du fylla i din beställning.</h2>
+<h2>Här kan du slutföra din beställning.</h2>
 <p>
     <?php
-    echo "Du har valt att köpa en " . $produkt . ". Utmärkt val!"
+    echo "Du har valt att köpa " . $produkt . ". Utmärkt val!"
     ?>
 </p>
 <p>Fyll i formuläret nedan för att slutföra din beställning. <br>
-Ett bekräftelsemail med alla uppgifter kommer att skickas till angiven mailadress.</p>
+Du kommer sedan att få se sammanställningen av alla uppgifter, för att kunna bekräfta. <br>
+Ett bekräftelsemail med alla uppgifter kommer därefter att skickas till angiven mailadress.</p>
 
+<table>
+<form method="get" action="exit.php">
 
-<form method="post" action="exit.php">
-Vad heter du? <br>
-Förnamn: <input name="fnamn" type="text"> <br>
-Efternamn: <input name="enamn" type="text"> <br>
-Adress: <input name="adr" type="text"> <br>
-Postnummer + ort: <input name="postadr" type="text"> <br>
-E-post:  <input name="epost" type="text"> <br>
-Leveransadress (om annan än ovan): <input name="levadr" type="text"> <br>
-Ev meddelande: <input name="meddelande" type="text"> <br>
+<tr><th colspan="2" class="th"> &bull;&bull;&bull;Din beställning<i><input name="produkt" type="hidden" value=<?php echo $produkt ?>></th></tr>
+<tr><td colspan="2" style="text-align:center"> <hr> Uppgifter om beställaren <hr></td></tr>
+<tr><td>Förnamn: </td><td><input name="fnamn" type="text"></td></tr>
+<tr><td>Efternamn</td><td><input name="enamn" type="text"></td></tr>
+<tr><td>Adress</td><td><input name="adr" type="text"></td></tr>
+<tr><td>Postnummer + ort:</td><td><input name="postadr" type="text"></td></tr>
+<tr><td>E-post:  </td><td><input name="epost" type="text"> </td></tr>
+<tr><td>Leveransadress (om annan än ovan): </td><td><input name="levadr" type="text"> </td></tr>
+<tr><td>Ev meddelande:</td><td><input name="meddelande" type="text"></td></tr>
+
+</table> 
 
 <button>
 <input type=
 "submit" value="Skicka">
 </button>
 </form>
+
 
 <?php
 echo "<pre>";

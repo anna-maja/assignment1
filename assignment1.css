@@ -1,9 +1,8 @@
-h1,
-h2,
-body {
+h1, h2, body {
   font-family: "Raleway", sans-serif;
 }
 h1 {
+  font-weight: bold;
   font-size: 2rem;
 }
 h2 {
@@ -13,25 +12,78 @@ h2 {
 body {
   font-size: 0.9rem;
   text-align: left;
+  padding: 2px 4px 2px 4px;
+  margin: auto; 
 }
+tr, knapp, form, footer {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}  
 button {
+  margin: auto;
   font-size: 0.9rem;
   text-align: center;
-  border: 1px, black, solid;
-  border-radius: 25%
-}
-/*
+  background-color: gainsboro;
+  color: rgb(82, 5, 5);
+  padding: 8px 20px 8px 20px;
+  margin: 1rem;
 
-tr, knapp, form, footer: samma font
-th: större storlek, fetstil
-td: mindre storlek, samma i alla
-*/ /*
+}
+img {
+  width: 200px;
+  height: 100px;
+  border:  black solid;
+  margin: auto; 
+}
+
+form {
+  font-size: 0.9rem;
+  /* text-align: center;
+  background-color: gainsboro; */
+  color: black;
+}
+
+
+footer {
+font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+font-size: 0.8rem;
+text-align: center;
+color: grey;
+background-color: gainsboro;
+} 
+
+/* table {
+  background-color: gainsboro;
+  border-collapse: collapse;
+} */
+tr {
+  padding: 0.5rem;
+  border-bottom: 0.5 solid gray;
+}
+.th {
+  margin: auto; 
+  text-align: center; 
+  font-size: 1;
+  font-weight: bold;
+  padding: 0.5rem;
+  border: 1px black solid;
+  border-collapse: collapse;
+  background-color: aquamarine;
+}
+.prtab{
+  border: black solid; 
+  border-collapse: collapse;
+  text-align: center;
+  padding: 1rem;
+}
+
+td {
+  font-size: 0.8;
+  padding: 0.1rem;
+}/*
 knapp: mindre storlek, kontur, centrerad text, touppercase
-knappBuy: färg1 color: grey;
+knappBuy: färg1 
 knappSend: färg2 
 */ /*
-footer: textstorlek, textalignment, bakgrundsfärg (font ovan)
-
 form: samma storlek som i knapp, men svart.
 */ /*
 font-family: 'Roboto', sans-serif;

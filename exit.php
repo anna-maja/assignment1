@@ -2,39 +2,55 @@
 include 'header.php'
 ?>
 <h1><?= PAGE_EXIT ?></h1>
+<link rel="stylesheet" href="assignment1.css">
+
+<p>
+ Vänligen bekräfta nedanstående uppgifter. 
+ </p>
 
 <p>
 <?php
+$produkt = $_GET['produkt'];
+?>
 
-$fnamn = $_GET['fnamn']; 
+<?php
+
+/*
+Welcome <?php echo $_GET["name"]; ?><br>
+Your email address is: <?php echo $_GET["email"]; ?>
+ */
+
+ //definition av alla arrayGETer som ska användas. 
+$produkt = $_GET['produkt'];
+$fnamn = $_GET['fnamn'];
 $enamn = $_GET['enamn'];
 $adr = $_GET['adr'];
 $levadr = $_GET['levadr'];
 $epost = $_GET['epost'];
 $meddelande = $_GET['meddelande'];
 
-echo "<table >"; // tabellstart
-echo "<tr><th>" . "Sammanfattning av din beställning" . "</th></tr>";
-echo "<tr>Namn<td></td> $fnamn $enamn<td></td></tr>";
-echo "<tr>Adress<td></td> $adr<td></td></tr>";
-echo "<tr>Leveransadress<td></td> $levadr<td></td></tr>";
-echo "<tr>E-post<td></td> $epost<td></td></tr>";
-echo "<tr>Meddelande<td></td> $meddelande<td></td></tr>";
-echo "</table >"; // tabell slut
 
-echo "Thank you, come again!";
 
+
+echo "<table>"; // börjar med att generera tabell med kanter
+
+echo "<tr><th></th><th></th></tr>"; // tabellhuvud med rubriker
+
+
+echo "<tr><td>Produkt</td>" . "&nbsp;" . "<td>" . $produkt . "</td></tr>";
+echo "<tr><td>Förnamn</td>" .
+    "&nbsp;" . "<td>" . ucwords(strtolower($fnamn)) . "</td></tr>";
+echo "<tr><td>Efternamn</td>" . "&nbsp;" . "<td>" . ucwords(strtolower($enamn)) . "</td></tr>";
+echo "<tr><td>Adress</td>" . "&nbsp;" . "<td>" . ucwords(strtolower($adr)) . "</td></tr>";
+echo "<tr><td>Leveransadress</td>" . "&nbsp;" . "<td>" . ucwords(strtolower($levadr)) . "</td></tr>";
+echo "<tr><td>E-post</td>" . "&nbsp;" . "<td>" . $epost . "</td></tr>";
+echo "<tr><td>Meddelande</td>" . "&nbsp;" . "<td>$meddelande</td></tr>";
+
+echo "</table>";
 ?>
- </p>
- <p>
- Vänligen bekräfta uppgifterna. 
- </p>
-
-
-
 <?php
 echo "<pre>";
-print_r($_POST);
+print_r($_GET);
 echo "</pre>";
 ?>
 <?php include 'footer.php' ?>
