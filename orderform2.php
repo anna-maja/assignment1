@@ -9,7 +9,7 @@ include 'header.php'
 <link href="https://fonts.googleapis.com/css?family=Raleway|Roboto" rel="stylesheet">
 
 <?php 
-$produkt = $_POST['produkt'];
+$produkt = $_POST[$sortiment[$i][0]];
 ?>
 
 <h1><?= PAGE_FORM ?></h1>
@@ -24,7 +24,7 @@ Du kommer sedan att få se sammanställningen av alla uppgifter, för att kunna 
 Ett bekräftelsemail med alla uppgifter kommer därefter att skickas till angiven mailadress.</p>
 
 <table>
-<form method="post" action="exit.php">
+<form method="post" action="#">
 <!-- exit.php"> -->
 
 <tr><th colspan="2" class="th"> &bull;&bull;&bull;Din beställning<i><input name="produkt" type="hidden" value=<?php echo $produkt ?>></th></tr>
@@ -50,33 +50,30 @@ Ett bekräftelsemail med alla uppgifter kommer därefter att skickas till angive
 
 <?php
 //inmatningarna
-// $produkt = $_POST['produkt'];
-// $fnamn = $_POST['fnamn'];
-// $enamn = $_POST['enamn'];
-// $adr = $_POST['adr'];
-// $levadr = $_POST['levadr'];
-// $epost = $_POST['epost'];
-// $meddelande = $_POST['meddelande'];
+$produkt = $_POST['produkt'];
+$fnamn = $_POST['fnamn'];
+$enamn = $_POST['enamn'];
+$adr = $_POST['adr'];
+$levadr = $_POST['levadr'];
+$epost = $_POST['epost'];
+$meddelande = $_POST['meddelande'];
 
 
-// tanke: att när jag trycker på knappen ,att sammanställningen då visas i samma fönster. 
-// Får inte till det nu, så jag fortsätter med att skicka vidare till exit.php. 
+echo "<table>"; // börjar med att generera tabell med kanter
 
-//echo "<table>"; // börjar med att generera tabell med kanter
-
-// echo "<tr><th><h2>Din beställning:</h2></th><th></th></tr>"; // tabellhuvud med rubriker
+echo "<tr><th><h2>Din beställning:</h2></th><th></th></tr>"; // tabellhuvud med rubriker
 
 
-// echo "<tr><td>Produkt</td>" . "&nbsp;" . "<td>" . $produkt . "</td></tr>";
-// echo "<tr><td>Förnamn</td>" .
-//     "&nbsp;" . "<td>" . ucwords(strtoupper($fnamn)) . "</td></tr>";
-// echo "<tr><td>Efternamn</td>" . "&nbsp;" . "<td>" . ucwords(strtoupper($enamn)) . "</td></tr>";
-// echo "<tr><td>Adress</td>" . "&nbsp;" . "<td>" . ucwords(strtoupper($adr)) . "</td></tr>";
-// echo "<tr><td>Leveransadress</td>" . "&nbsp;" . "<td>" . ucwords(strtoupper($levadr)) . "</td></tr>";
-// echo "<tr><td>E-post</td>" . "&nbsp;" . "<td>" . $epost . "</td></tr>";
-// echo "<tr><td>Meddelande</td>" . "&nbsp;" . "<td>$meddelande</td></tr>";
+echo "<tr><td>Produkt</td>" . "&nbsp;" . "<td>" . $produkt . "</td></tr>";
+echo "<tr><td>Förnamn</td>" .
+    "&nbsp;" . "<td>" . ucwords(strtoupper($fnamn)) . "</td></tr>";
+echo "<tr><td>Efternamn</td>" . "&nbsp;" . "<td>" . ucwords(strtoupper($enamn)) . "</td></tr>";
+echo "<tr><td>Adress</td>" . "&nbsp;" . "<td>" . ucwords(strtoupper($adr)) . "</td></tr>";
+echo "<tr><td>Leveransadress</td>" . "&nbsp;" . "<td>" . ucwords(strtoupper($levadr)) . "</td></tr>";
+echo "<tr><td>E-post</td>" . "&nbsp;" . "<td>" . $epost . "</td></tr>";
+echo "<tr><td>Meddelande</td>" . "&nbsp;" . "<td>$meddelande</td></tr>";
 
-// echo "</table>";
+echo "</table>";
 ?>
 
 
